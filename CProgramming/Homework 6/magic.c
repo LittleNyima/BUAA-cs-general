@@ -1,0 +1,106 @@
+#include <stdio.h>
+int main()
+{
+	int n=0;//秩
+	int i=0,j=0;//行列计数器
+	int m=0;//计数器
+	int l=0,r=0,u=0,d=0;//上下左右边界计数器
+	int mag[10][10]={0};
+	FILE * out;
+	out=fopen("file.out","w");
+	scanf("%d",&n);
+	r=n-1;
+	d=n-1;
+	if(n%2==0)
+	{	
+		while(m<(n*n))
+		{
+			while(j<r)
+			{
+				mag[i][j]=m+1;
+				m=m+1;
+				j=j+1;
+			}
+			while(i<d)
+			{
+				mag[i][j]=m+1;
+				m=m+1;
+				i=i+1;
+			}
+			while(j>l)
+			{
+				mag[i][j]=m+1;
+				m=m+1;
+				j=j-1;
+			}
+			while(i>u)
+			{
+				mag[i][j]=m+1;
+				m=m+1;
+				i=i-1;
+			}
+			i=i+1;
+			j=j+1;
+			u=u+1;
+			d=d-1;
+			l=l+1;
+			r=r-1;
+		}
+	}
+	else
+	{
+		while(m<(n*n))
+		{
+			if(m==(n*n-1))
+			{
+				mag[i][j]=m+1;
+				m=m+1;
+			}
+			while(j<r)
+			{
+				mag[i][j]=m+1;
+				m=m+1;
+				j=j+1;
+			}
+			while(i<d)
+			{
+				mag[i][j]=m+1;
+				m=m+1;
+				i=i+1;
+			}
+			while(j>l)
+			{
+				mag[i][j]=m+1;
+				m=m+1;
+				j=j-1;
+			}
+			while(i>u)
+			{
+				mag[i][j]=m+1;
+				m=m+1;
+				i=i-1;
+			}
+			i=i+1;
+			j=j+1;
+			u=u+1;
+			d=d-1;
+			l=l+1;
+			r=r-1;
+		}
+	}
+	i=0;
+	j=0;
+	while(i<n)
+	{
+		while(j<n)
+		{
+			fprintf(out,"%5d",mag[i][j]);
+			j=j+1;
+		}
+		fprintf(out,"\n");
+		j=0;
+		i=i+1;
+	}
+	fclose(out);
+	return 0;
+}
