@@ -4,7 +4,7 @@
 | 课程名           | 我到达的位置         | 代码收录情况             | 索引                                       |
 | ---------------- | -------------------- | ------------------------ | ------------------------------------------ |
 | 高级语言程序设计 | 完成全部作业         | 已收录:white_check_mark: | [CProgramming](CProgramming/)              |
-| 数据结构         | 完成全部练习与大作业 | 正在整理:soon:           | N.A.                                       |
+| 数据结构         | 完成全部练习与大作业 | 已收录:white_check_mark: | [DataStructure](DataStructure)             |
 | 机器学习导论     | 完成申优             | 已收录:white_check_mark: | [MachineLearning](MachineLearning)         |
 | 深度学习         | 完成申优             | 已收录:white_check_mark: | [DeepLearning](DeepLearning)               |
 | 软件工程         | 完成功能验收         | 已收录:white_check_mark: | [SoftwareEngineering](SoftwareEngineering) |
