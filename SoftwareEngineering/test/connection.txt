@@ -1,0 +1,135 @@
+stop：
+application.get('/stop', urlForm, function (req, res) {
+   execute(delayCheck);
+   fs.writeFile(fileName, 'stop',  function(err) {
+      。。。。。
+   });
+
+
+
+forward：
+application.get('/forward', urlForm, function (req, res) {
+   execute(delayCheck);
+   fs.writeFile(fileName, 'forward',  function(err) {
+    。。。。。。。
+   });
+
+back：
+application.get('/back', urlForm, function (req, res) {
+   fs.writeFile(fileName, 'backward',  function(err) {
+   。。。。。
+   });
+
+
+
+left：
+application.get('/left', urlForm, function (req, res) {
+   fs.writeFile(fileName, 'left',  function(err) {
+ 。。。。。。
+   });
+
+
+right：
+application.get('/right', urlForm, function (req, res) {
+   fs.writeFile(fileName, 'right',  function(err) {
+ 。。。。。
+   });
+
+
+addPoint：
+application.post('/waypoint', urlJson, function(req, res){
+   var datas = JSON.parse(JSON.stringify(req.body));
+   var waypoint_name;
+   for (data in datas){
+      var js = JSON.parse(data);
+      waypoint_name = js.waypoint_name;
+   }
+   console.log("waypoing_name:"+waypoint_name);
+   res.send("point done");
+   fs.writeFile(fileName, "addPoint_" + waypoint_name,  function(err) {
+      。。。。。
+   });
+})
+
+
+delPoint：
+application.post('/resetMap', urlJson, function(req, res){
+   var datas = JSON.parse(JSON.stringify(req.body));
+   var waypoint_name;
+   for (data in datas){
+      var js = JSON.parse(data);
+      waypoint_name = js.waypoint_name;
+   }
+   console.log("del_waypoing_name:"+waypoint_name);
+   res.send("del point done");
+   fs.writeFile(fileName, "delPoint_" + waypoint_name,  function(err) {
+     。。。。。。
+})
+
+
+
+goto_waypoint_name：
+application.post('/navi', urlJson, function(req, res){
+   var datas = JSON.parse(JSON.stringify(req.body));
+   var navi_name;
+   for (data in datas){
+      var js = JSON.parse(data);
+      navi_name = js.navi_name;
+   }
+   console.log("navi_name:"+navi_name);
+   res.send("navi done");
+   fs.writeFile(fileName, "goto_" + navi_name,  function(err) {
+    。。。。。
+})
+
+
+
+grab：
+application.post('/grab', urlJson, function(req, res){
+   var datas = JSON.parse(JSON.stringify(req.body));
+   var grab_name;
+   for (data in datas){
+      var js = JSON.parse(data);
+      grab_name = js.grab_name;
+   }
+   console.log("grab_name:"+grab_name);
+   res.send("grab done");
+   
+   fs.writeFile(fileName, "grab_" + grab_name,  function(err) {
+。。。。。。
+})
+
+
+loadMap：
+application.post('/loadMap', urlJson, function(req, res){
+   console.log(req.body);
+   var datas = JSON.parse(JSON.stringify(req.body));
+   var load_map;
+   for (data in datas){
+      var js = JSON.parse(data);
+      load_map = js.load_map;
+   }
+   console.log("map_name:"+load_map);
+   res.send("grab done");
+   var res = "notLoad";
+   if (load_map == -1)  res = "loadMap"; 
+   fs.writeFile(fileName, res,  function(err) {
+      。。。。。
+})
+
+
+savePoint：
+application.get('/saveMap', urlForm, function(req, res){
+   console.log("saveMap");
+   fs.writeFile(fileName, "savePoint",  function(err) {
+      。。。。。。
+})
+
+
+
+pass：
+application.get('/pass', urlForm, function(req, res){
+   console.log("pass");
+   fs.writeFile(fileName, "pass",  function(err) {
+      。。。。。。
+})

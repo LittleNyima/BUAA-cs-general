@@ -1,0 +1,2 @@
+roslaunch web_06_demo vel.launch
+roslaunch web_06_demo web6_publish
