@@ -8,6 +8,5 @@
 | 机器学习导论     | 2020秋季 | 完成申优             | [MachineLearning](MachineLearning)         |
 | 深度学习         | 2021春季 | 完成申优             | [DeepLearning](DeepLearning)               |
 | 软件工程         | 2021春季 | 完成功能验收         | [SoftwareEngineering](SoftwareEngineering) |
-| 计算机图形学     | 2021秋季 | 完成全部指定任务     | N.A.                                       |
+| 计算机图形学     | 2021秋季 | 完成全部指定任务     | [ComputerGraphics](ComputerGraphics)       |
 
-**注：计算机图形学相关代码在学期结束课程出分前暂不公开。**

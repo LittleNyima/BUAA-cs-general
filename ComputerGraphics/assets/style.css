@@ -1,0 +1,72 @@
+#gl-canvas {
+    width: 75vw;
+    height: 75vh;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#gl-canvas-fixed-size {
+    width: min(75vw, 75vh);
+    height: min(75vw, 75vh);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.guidance {
+    color: white;
+    text-align: center;
+    font-size: 2.5vh;
+    font-family: Georgia, serif;
+    top: 10px;
+    display: block;
+}
+
+.canvas-bg {
+    background-color: black;
+}
+
+a:link {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:active {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: blue;
+    text-decoration: underline;
+}
+
+li {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.note {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+em {
+    color: red;
+    font-size: 3vh;
+}
